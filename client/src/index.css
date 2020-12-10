@@ -1,0 +1,466 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  user-select: none;
+  -moz-user-select: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+/* #root {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  max-height: 100vh;
+  scroll-behavior: smooth;
+}
+#root>*{
+  scroll-snap-align: start;
+} */
+:root {
+  --dark-1: #0D0D0D;
+  --dark-2: #262626;
+  --dark-3: #404040;
+  --white: #dddddd;
+  --active: #ffffff;
+
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* =========== Header =============================================================== */
+
+
+.header {
+  background-image: url(./assets/img/story.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.inner-header {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.navigation {
+  background-color: var(--dark-1);
+  /* padding: 10px 0px; */
+}
+
+.logo a {
+  color: var(--active);
+  font-size: 2em;
+}
+
+.navbar a {
+  color: var(--white);
+  text-transform: uppercase;
+  padding: 15px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  transition: background 0.5s;
+}
+
+.navbar a:hover {
+  color: var(--active);
+  background-color: #8B8370;
+}
+
+.login-nav a {
+  background-color: var(--dark-3);
+  color: var(--white);
+  /* padding: 15px; */
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.login-nav a:hover {
+  color: var(--active);
+  background-color: var(--dark-3);
+}
+
+.navigation+div {
+  height: 500px;
+}
+
+.numberone {
+  color: var(--active);
+  padding: 15px 20px;
+  font-size: 2em;
+  /* animation: changebg 2s ease infinite ; */
+  /* background-color: var(--white); */
+  text-shadow: 0px 0px 5px var(--dark-1);
+}
+
+.numberone:hover {
+  animation: none;
+}
+
+@keyframes changebg {
+  0% {
+    background-color: var(--white);
+  }
+
+  50% {
+    background-color: seagreen;
+  }
+
+  100% {
+    background-color: lightblue;
+  }
+}
+
+.primary-btn {
+  padding: 10px 20px;
+  background-color: var(--dark-3);
+  color: var(--white);
+  border-radius: 5px;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.primary-btn-inverse {
+  padding: 10px 20px;
+  color: var(--dark-3);
+  background-color: var(--white);
+  border-radius: 5px;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.primary-btn-inverse:hover,
+.primary-btn:hover {
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* =========== Story of today =============================================================== */
+section {
+  min-height: 100vh;
+}
+.random-title {
+  font-size: 2em;
+}
+
+.paper {
+  width: 80%;
+  padding: 15px;
+  box-shadow: 0px 0px 5px 0.5px rgb(0, 0, 0, 0.2);
+}
+
+.story-title {
+  font-weight: 600;
+}
+
+.story-author {
+  font-weight: 500;
+}
+
+.paper .img {
+  width: 160px;
+  height: 160px;
+  border: 0px solid var(--active);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+ 
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.paper img {
+  width: 100%;
+}
+
+/* =========== About =============================================================== */
+#about .container{
+min-height: 100vh;
+}
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  width: 50%;
+  text-align: center;
+}
+.about-items>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  transition: transform 0.5s;
+}
+.about-items b {
+  margin: 10px;
+  font-size: 1.5rem;
+}
+.about-items>div:hover {
+  transform: scale(1.2);
+}
+
+/* =========== Auth =============================================================== */
+/* =========== Auth =============================================================== */
+#auth {
+  background-color: var(--dark-3);
+  color: var(--white);
+}
+.auth-cont h3 {
+  font-size: 2em;
+  margin: 20px;
+}
+.auth-cont li {
+  margin: 15px 0;
+}
+.auth-type {
+  margin-top: 100px;
+  width: 400px;
+  transform: scale(1);
+  transition: transform 1s;
+  /* background-color: var(--white); */
+  box-shadow: 0px 3px 10px rgb(0, 0, 0, 0.2);
+}
+.auth-title {
+  font-size: 2em;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+.auth-type form>div{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+input {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid var(--dark-3);
+  border-radius: 5px;
+  outline: none;
+}
+/* .auth-type input[type=submit] {
+  background-color: var(--dark-3);
+  color: var(--active);
+} */
+#auth a {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+/* =========== Search =============================================================== */
+#search {
+  background-color: var(--white);
+}
+#search .container {
+  height: 100%;
+  overflow: auto;
+}
+.search {
+  width: 80%;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  border-bottom: 1px solid #000;
+  transition: 0.5s;
+}
+.search-lg {
+  margin-top: 50vh;
+  transform: translateY(-50%);
+}
+.search input {
+  background-color: var(--white);
+  border: none;
+  width: 90%;
+}
+.search-lg input {
+  border: none;
+  font-size: 2rem;
+}
+.search-sm {
+  margin: 20px 0;
+}
+.search-sm input {
+
+  font-size: 1.5rem;
+}
+.search-list {
+  width: 80%;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+.search-list>div {
+  margin: 10px 0px;
+  padding: 10px 15px;
+  background-color: var(--active);
+  display: flex;
+  flex-direction: column;
+}
+.search-list h3 {
+  font-weight: normal;
+}
+.search-list p {
+  color: var(--dark-2);
+}
+.search-list>div>div {
+  display: flex;
+}
+
+/* =========== Categories =============================================================== */
+#categories {
+  position: relative;
+}
+.categ {
+  width: 100%;
+  min-height: 50vh;
+  background-image: url('./assets/img/bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.categ .container {
+  min-height: 50vh;
+  color: var(--active);
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.sub-categ::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  margin: 0;
+}
+.itemss {
+  margin: 10px;
+  background-color: green;
+  color: var(--active);
+  padding: 4px 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.5;
+}
+.itemss:hover {
+  transform: scale(0.98);
+}
+
+
+
+
+/* =========== Subscribe =============================================================== */
+#subscribe  {
+  background-image: url(./assets/img/bg.jpg);
+  color: var(--active);
+}
+#subscribe>div {
+  background-color: rgb(0, 0, 0, 0.5);
+}
+#subscribe .container {
+  min-height: 100vh;
+}
+#subscribe h1 {
+  font-size: 2em;
+  font-weight: normal;
+  margin: 10px 0;
+}
+#subscribe p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+#subscribe form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  background-color: rgb(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+#subscribe form>div {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+#subscribe input {
+  background-color: transparent;
+  border-color: var(--active);
+  color: var(--active);
+  margin: 10px 0;  
+}
+#subscribe input[type='submit'] {
+  background-color: var(--active);
+  color: #000;
+}
+
+
+/* =========== Header =============================================================== */
+/* =========== Header =============================================================== */
+
+
+footer {
+  background-color: var(--dark-1);
+  min-height: 200pxvh;
+  color: var(--white);
+  padding: 20px 0px;
+}
+footer .logo a {
+  font-size: 3em;
+}
+footer a {
+  color: var(--active);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.scroll-to-top {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 15px;
+  bottom: 30px;
+  border-radius: 200px;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+  background-color: #ffffff;
+  font-size: x-large;
+  box-shadow: 0 0 8px #000;
+}
+
+.scroll-to-top:hover>* {
+  transform: translateY(-3px);
+}
